@@ -1,5 +1,12 @@
 # 📋 Pull Requests
 
+## 🟢 Open [Add model customization to php-pro subagents](https://github.com/wshobson/agents/pull/18)
+**Repository:** `wshobson/agents`  
+**Updated:** 2025-07-31  
+**Description:** #7 PHP, like other languages, specifies the Sonnet 4 model.  
+
+---
+
 ## ✅ Merged [Add php-pro subagent for idiomatic PHP programming.](https://github.com/wshobson/agents/pull/10)
 **Repository:** `wshobson/agents`  
 **Updated:** 2025-07-31  
@@ -12,12 +19,6 @@
 **Updated:** 2021-08-24  
 **Description:** * **Please check if the PR fulfills these requirements**
 - [ ] The commit message follows our guide...  
-
----
-
-## ✅ Merged [test pull request](https://github.com/yenaryenar/github-code-owner/pull/1)
-**Repository:** `yenaryenar/github-code-owner`  
-**Updated:** 2021-04-28  
 
 ---
 
