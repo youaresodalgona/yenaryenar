@@ -1,0 +1,121 @@
+# .github/workflows/update-pr-list.yml
+name: Update PR List
+
+on:
+  schedule:
+    - cron: '0 */5 * * *'  # 6시간마다 업데이트
+  workflow_dispatch:
+
+jobs:
+  update-pr-list:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Update PR List
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        EXCLUDED_USERS: "dependabot,renovate,github-actions,bot,mtudy"
+      run: |
+        cat << 'EOF' > update-prs.js
+        const https = require('https');
+        const fs = require('fs');
+        
+        const token = process.env.GITHUB_TOKEN;
+        const excludedUsers = process.env.EXCLUDED_USERS.split(',').map(u => u.trim());
+        
+        function makeRequest(path) {
+          return new Promise((resolve, reject) => {
+            const options = {
+              hostname: 'api.github.com',
+              path: path,
+              headers: {
+                'Authorization': `token ${token}`,
+                'User-Agent': 'PR-List-Updater'
+              }
+            };
+            
+            https.get(options, (res) => {
+              let data = '';
+              res.on('data', chunk => data += chunk);
+              res.on('end', () => {
+                try {
+                  resolve(JSON.parse(data));
+                } catch (e) {
+                  reject(e);
+                }
+              });
+            }).on('error', reject);
+          });
+        }
+        
+        async function getPRs() {
+          try {
+            const username = process.env.GITHUB_REPOSITORY.split('/')[0];
+            
+            // 내가 작성한 모든 PR 검색 (merged + open)
+            const mergedPRs = await makeRequest(`/search/issues?q=type:pr+author:${username}+is:merged&sort=updated&order=desc&per_page=50`);
+            const openPRs = await makeRequest(`/search/issues?q=type:pr+author:${username}+is:open&sort=updated&order=desc&per_page=20`);
+            
+            const allPRs = [...openPRs.items, ...mergedPRs.items];
+            
+            // 제외할 사용자의 저장소 필터링
+            const filteredPRs = allPRs.filter(pr => {
+              const repoOwner = pr.repository_url.split('/').slice(-2)[0];
+              return !excludedUsers.includes(repoOwner);
+            });
+            
+            // 중복 제거 (같은 PR이 open과 merged에 둘 다 있을 수 있음)
+            const uniquePRs = filteredPRs.filter((pr, index, self) => 
+              index === self.findIndex(p => p.id === pr.id)
+            );
+            
+            // 날짜순 정렬
+            uniquePRs.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+            
+            let markdown = '# 📋 Pull Requests\n\n';
+            
+            if (uniquePRs.length === 0) {
+              markdown += '아직 PR이 없습니다.\n';
+            } else {
+              uniquePRs.forEach(pr => {
+                const repo = pr.repository_url.split('/').slice(-2).join('/');
+                const date = new Date(pr.updated_at).toISOString().split('T')[0];
+                const status = pr.state === 'open' ? '🟢 Open' : '✅ Merged';
+                
+                markdown += `## ${status} [${pr.title}](${pr.html_url})\n`;
+                markdown += `**Repository:** \`${repo}\`  \n`;
+                markdown += `**Updated:** ${date}  \n`;
+                if (pr.body && pr.body.trim()) {
+                  const shortBody = pr.body.length > 100 ? pr.body.substring(0, 100) + '...' : pr.body;
+                  markdown += `**Description:** ${shortBody}  \n`;
+                }
+                markdown += '\n---\n\n';
+              });
+            }
+            
+            markdown += `\n*Last updated: ${new Date().toISOString().split('T')[0]}*\n`;
+            
+            fs.writeFileSync('README.md', markdown);
+            console.log(`Updated with ${uniquePRs.length} PRs`);
+            
+          } catch (error) {
+            console.error('Error:', error);
+            process.exit(1);
+          }
+        }
+        
+        getPRs();
+        EOF
+        
+        node update-prs.js
+        
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git diff --staged --quiet || git commit -m "Update PR list [$(date +'%Y-%m-%d %H:%M')]"
+        git push
