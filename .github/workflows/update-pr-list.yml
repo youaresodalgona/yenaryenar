@@ -3,7 +3,7 @@ name: Update PR List
 
 on:
   schedule:
-    - cron: '0 */5 * * *'  # 6시간마다 업데이트
+    - cron: '0 */6 * * *'  # 6시간마다 업데이트
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
     - name: Update PR List
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        EXCLUDED_USERS: "dependabot,renovate,github-actions,bot,mtudy"
+        EXCLUDED_USERS: "dependabot,renovate,github-actions,bot,mtudy,yenaryenar"
       run: |
         cat << 'EOF' > update-prs.js
         const https = require('https');
