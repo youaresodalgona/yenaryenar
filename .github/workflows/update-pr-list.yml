@@ -60,8 +60,9 @@ jobs:
             
             const mergedPRs = await makeRequest('/search/issues?q=type:pr+author:' + username + '+is:merged&sort=updated&order=desc&per_page=100');
             const openPRs = await makeRequest('/search/issues?q=type:pr+author:' + username + '+is:open&sort=updated&order=desc&per_page=50');
+            const closedPRs = await makeRequest('/search/issues?q=type:pr+author:' + username + '+is:closed&sort=updated&order=desc&per_page=50');
             
-            const allPRs = [...openPRs.items, ...mergedPRs.items];
+            const allPRs = [...openPRs.items, ...mergedPRs.items, ...closedPRs.items];
             
             const filteredPRs = allPRs.filter(pr => {
               const repoOwner = pr.repository_url.split('/').slice(-2)[0];
@@ -84,7 +85,15 @@ jobs:
         function generatePRCard(pr) {
           const repo = pr.repository_url.split('/').slice(-2).join('/');
           const date = new Date(pr.updated_at).toISOString().split('T')[0];
-          const status = pr.state === 'open' ? '🟢 Open' : '✅ Merged';
+          let status;
+          if (pr.state === 'open') {
+            status = '🟢 Open';
+          } else if (pr.pull_request && pr.pull_request.merged_at) {
+            status = '✅ Merged';
+          } else {
+            status = '❌ Closed';
+          }
+          
           const shortBody = pr.body && pr.body.trim() ? 
             (pr.body.length > 100 ? pr.body.substring(0, 100) + '...' : pr.body) : '';
           
