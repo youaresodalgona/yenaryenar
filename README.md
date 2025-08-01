@@ -1,6 +1,13 @@
 # 📋 Pull Requests
 
-총 20개의 PR
+총 22개의 PR
+
+## ❌ Closed [Add model customization to php-pro subagents](https://github.com/wshobson/agents/pull/18)
+**Repository:** `wshobson/agents`  
+**Updated:** 2025-07-31  
+**Description:** #7 PHP, like other languages, specifies the Sonnet 4 model.  
+
+---
 
 ## ✅ Merged [Add php-pro subagent for idiomatic PHP programming.](https://github.com/wshobson/agents/pull/10)
 **Repository:** `wshobson/agents`  
@@ -71,14 +78,7 @@
 
 ---
 
-## ✅ Merged [[8.x] update seeding.md](https://github.com/laravelkr/docs/pull/324)
-**Repository:** `laravelkr/docs`  
-**Updated:** 2020-09-22  
-**Description:** 시더 디렉터리 이름이 변경되었습니다. 또, 팩토리의 변경으로 예제도 변경되었습니다.  
 
----
-
-
-**페이지:** **1** | [2](page-2.md) 
+**페이지:** **1** | [2](page-2.md) | [3](page-3.md) 
 
 *Last updated: 2025-08-01*

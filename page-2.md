@@ -2,9 +2,23 @@
 
 [← 메인으로 돌아가기](https://github.com/yenaryenar)
 
-총 20개의 PR (11-20)
+총 22개의 PR (11-20)
 
-**페이지:** [← 이전](README.md) | **2**
+**페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
+
+## ✅ Merged [[8.x] update seeding.md](https://github.com/laravelkr/docs/pull/324)
+**Repository:** `laravelkr/docs`  
+**Updated:** 2020-09-22  
+**Description:** 시더 디렉터리 이름이 변경되었습니다. 또, 팩토리의 변경으로 예제도 변경되었습니다.  
+
+---
+
+## ❌ Closed [[8.x] update database.md](https://github.com/laravelkr/docs/pull/320)
+**Repository:** `laravelkr/docs`  
+**Updated:** 2020-09-22  
+**Description:** 내용 자체에 변경사항은 없는데, 문서 내에 간단한 HTML이 추가된 걸 발견해서 수정했습니다.  
+
+---
 
 ## ✅ Merged [[8.x] update queries.md](https://github.com/laravelkr/docs/pull/321)
 **Repository:** `laravelkr/docs`  
@@ -71,24 +85,10 @@ In this PR changed to call the `__toString` method of the` GuzzleHttp \ Psr7 \ S
 
 ---
 
-## ✅ Merged [Added Korean translation](https://github.com/z-song/laravel-admin/pull/3434)
-**Repository:** `z-song/laravel-admin`  
-**Updated:** 2019-05-30  
-**Description:** While using your library, I added this because I felt the need to translate Korean.  
 
 ---
 
-## ✅ Merged [docs: Typo in Korean translation](https://github.com/vuetifyjs/vuetify/pull/5922)
-**Repository:** `vuetifyjs/vuetify`  
-**Updated:** 2019-04-14  
-**Description:** I found a typo for Korean translation and corrected it. Please merge them.  
-
----
-
-
----
-
-**페이지:** [← 이전](README.md) | **2**
+**페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
 
 
 *Last updated: 2025-08-01*
