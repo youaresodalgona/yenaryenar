@@ -19,7 +19,7 @@ jobs:
     - name: Update PR List
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        EXCLUDED_USERS: "dependabot,renovate,github-actions,bot,mtudy,yenaryenar"
+        EXCLUDED_USERS: "dependabot,renovate,github-actions,bot,yenaryenar,mtudy"
       run: |
         cat > update-prs.js << 'SCRIPT_END'
         const https = require('https');
@@ -35,7 +35,7 @@ jobs:
               hostname: 'api.github.com',
               path: path,
               headers: {
-                'Authorization': `token ${token}`,
+                'Authorization': 'token ' + token,
                 'User-Agent': 'PR-List-Updater'
               }
             };
@@ -58,8 +58,8 @@ jobs:
           try {
             const username = process.env.GITHUB_REPOSITORY.split('/')[0];
             
-            const mergedPRs = await makeRequest(`/search/issues?q=type:pr+author:${username}+is:merged&sort=updated&order=desc&per_page=100`);
-            const openPRs = await makeRequest(`/search/issues?q=type:pr+author:${username}+is:open&sort=updated&order=desc&per_page=50`);
+            const mergedPRs = await makeRequest('/search/issues?q=type:pr+author:' + username + '+is:merged&sort=updated&order=desc&per_page=100');
+            const openPRs = await makeRequest('/search/issues?q=type:pr+author:' + username + '+is:open&sort=updated&order=desc&per_page=50');
             
             const allPRs = [...openPRs.items, ...mergedPRs.items];
             
@@ -88,14 +88,15 @@ jobs:
           const shortBody = pr.body && pr.body.trim() ? 
             (pr.body.length > 100 ? pr.body.substring(0, 100) + '...' : pr.body) : '';
           
-          return `## ${status} [${pr.title}](${pr.html_url})
-**Repository:** \`${repo}\`  
-**Updated:** ${date}  
-${shortBody ? `**Description:** ${shortBody}  ` : ''}
-
----
-
-`;
+          let card = '## ' + status + ' [' + pr.title + '](' + pr.html_url + ')\n';
+          card += '**Repository:** `' + repo + '`  \n';
+          card += '**Updated:** ' + date + '  \n';
+          if (shortBody) {
+            card += '**Description:** ' + shortBody + '  \n';
+          }
+          card += '\n---\n\n';
+          
+          return card;
         }
         
         function createPagedMarkdown(allPRs, page, itemsPerPage) {
@@ -104,14 +105,14 @@ ${shortBody ? `**Description:** ${shortBody}  ` : ''}
           const pagePRs = allPRs.slice(startIndex, endIndex);
           const totalPages = Math.ceil(allPRs.length / itemsPerPage);
           
-          let markdown = `# 📋 Pull Requests - Page ${page}\n\n`;
-          markdown += `총 ${allPRs.length}개의 PR (${startIndex + 1}-${Math.min(endIndex, allPRs.length)})\n\n`;
+          let markdown = '# 📋 Pull Requests - Page ' + page + '\n\n';
+          markdown += '총 ' + allPRs.length + '개의 PR (' + (startIndex + 1) + '-' + Math.min(endIndex, allPRs.length) + ')\n\n';
           
           // 네비게이션
           let nav = '**페이지:** ';
-          if (page > 1) nav += `[← 이전](page-${page-1}.md) | `;
-          nav += `**${page}**`;
-          if (page < totalPages) nav += ` | [다음 →](page-${page+1}.md)`;
+          if (page > 1) nav += '[← 이전](page-' + (page-1) + '.md) | ';
+          nav += '**' + page + '**';
+          if (page < totalPages) nav += ' | [다음 →](page-' + (page+1) + '.md)';
           nav += '\n\n';
           markdown += nav;
           
@@ -123,7 +124,7 @@ ${shortBody ? `**Description:** ${shortBody}  ` : ''}
           // 하단 네비게이션
           markdown += '\n---\n\n';
           markdown += nav;
-          markdown += `\n*Last updated: ${new Date().toISOString().split('T')[0]}*\n`;
+          markdown += '\n*Last updated: ' + new Date().toISOString().split('T')[0] + '*\n';
           
           return markdown;
         }
@@ -134,7 +135,7 @@ ${shortBody ? `**Description:** ${shortBody}  ` : ''}
           
           // 메인 README.md (첫 페이지)
           let mainMarkdown = '# 📋 Pull Requests\n\n';
-          mainMarkdown += `총 ${allPRs.length}개의 PR\n\n`;
+          mainMarkdown += '총 ' + allPRs.length + '개의 PR\n\n';
           
           const firstPagePRs = allPRs.slice(0, ITEMS_PER_PAGE);
           firstPagePRs.forEach(pr => {
@@ -143,30 +144,30 @@ ${shortBody ? `**Description:** ${shortBody}  ` : ''}
           
           // 더 보기 링크
           if (allPRs.length > ITEMS_PER_PAGE) {
-            mainMarkdown += `\n**[→ 더 많은 PR 보기 (${allPRs.length - ITEMS_PER_PAGE}개 더)](more.md)** | `;
+            mainMarkdown += '\n**[→ 더 많은 PR 보기 (' + (allPRs.length - ITEMS_PER_PAGE) + '개 더)](more.md)** | ';
             for (let i = 2; i <= Math.min(totalPages, 5); i++) {
-              mainMarkdown += `[${i}페이지](page-${i}.md) `;
+              mainMarkdown += '[' + i + '페이지](page-' + i + '.md) ';
             }
-            if (totalPages > 5) mainMarkdown += `... [${totalPages}페이지](page-${totalPages}.md)`;
+            if (totalPages > 5) mainMarkdown += '... [' + totalPages + '페이지](page-' + totalPages + '.md)';
             mainMarkdown += '\n';
           }
           
-          mainMarkdown += `\n*Last updated: ${new Date().toISOString().split('T')[0]}*\n`;
+          mainMarkdown += '\n*Last updated: ' + new Date().toISOString().split('T')[0] + '*\n';
           fs.writeFileSync('README.md', mainMarkdown);
           
           // more.md (전체 목록)
           let moreMarkdown = '# 📋 All Pull Requests\n\n';
-          moreMarkdown += `[← 메인으로 돌아가기](README.md)\n\n`;
-          moreMarkdown += `총 ${allPRs.length}개의 PR\n\n`;
+          moreMarkdown += '[← 메인으로 돌아가기](README.md)\n\n';
+          moreMarkdown += '총 ' + allPRs.length + '개의 PR\n\n';
           
           // 페이지 링크들
           if (totalPages > 1) {
             moreMarkdown += '**페이지:** ';
             for (let i = 1; i <= totalPages; i++) {
               if (i === 1) {
-                moreMarkdown += `[1페이지](README.md) `;
+                moreMarkdown += '[1페이지](README.md) ';
               } else {
-                moreMarkdown += `[${i}페이지](page-${i}.md) `;
+                moreMarkdown += '[' + i + '페이지](page-' + i + '.md) ';
               }
             }
             moreMarkdown += '\n\n---\n\n';
@@ -176,16 +177,16 @@ ${shortBody ? `**Description:** ${shortBody}  ` : ''}
             moreMarkdown += generatePRCard(pr);
           });
           
-          moreMarkdown += `\n*Last updated: ${new Date().toISOString().split('T')[0]}*\n`;
+          moreMarkdown += '\n*Last updated: ' + new Date().toISOString().split('T')[0] + '*\n';
           fs.writeFileSync('more.md', moreMarkdown);
           
           // 개별 페이지들 생성 (2페이지부터)
           for (let page = 2; page <= totalPages; page++) {
             const pageMarkdown = createPagedMarkdown(allPRs, page, ITEMS_PER_PAGE);
-            fs.writeFileSync(`page-${page}.md`, pageMarkdown);
+            fs.writeFileSync('page-' + page + '.md', pageMarkdown);
           }
           
-          console.log(`Updated with ${allPRs.length} PRs, ${totalPages} pages`);
+          console.log('Updated with ' + allPRs.length + ' PRs, ' + totalPages + ' pages');
         }
         
         main();
