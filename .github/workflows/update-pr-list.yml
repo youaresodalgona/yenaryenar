@@ -104,13 +104,16 @@ jobs:
           const endIndex = startIndex + itemsPerPage;
           const pagePRs = allPRs.slice(startIndex, endIndex);
           const totalPages = Math.ceil(allPRs.length / itemsPerPage);
+          const username = process.env.GITHUB_REPOSITORY.split('/')[0];
           
           let markdown = '# 📋 Pull Requests - Page ' + page + '\n\n';
+          markdown += '[← 메인으로 돌아가기](https://github.com/' + username + ')\n\n';
           markdown += '총 ' + allPRs.length + '개의 PR (' + (startIndex + 1) + '-' + Math.min(endIndex, allPRs.length) + ')\n\n';
           
           // 네비게이션
           let nav = '**페이지:** ';
-          if (page > 1) nav += '[← 이전](page-' + (page-1) + '.md) | ';
+          if (page > 2) nav += '[← 이전](page-' + (page-1) + '.md) | ';
+          else if (page === 2) nav += '[← 이전](README.md) | ';
           nav += '**' + page + '**';
           if (page < totalPages) nav += ' | [다음 →](page-' + (page+1) + '.md)';
           nav += '\n\n';
@@ -173,6 +176,6 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add README.md more.md page-*.md
+        git add README.md page-*.md
         git diff --staged --quiet || git commit -m "Update PR list [$(date +'%Y-%m-%d %H:%M')]"
         git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
