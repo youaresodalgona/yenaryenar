@@ -1,8 +1,10 @@
 # 📋 Pull Requests - Page 2
 
+[← 메인으로 돌아가기](https://github.com/yenaryenar)
+
 총 20개의 PR (11-20)
 
-**페이지:** [← 이전](page-1.md) | **2**
+**페이지:** [← 이전](README.md) | **2**
 
 ## ✅ Merged [[8.x] update queries.md](https://github.com/laravelkr/docs/pull/321)
 **Repository:** `laravelkr/docs`  
@@ -86,7 +88,7 @@ In this PR changed to call the `__toString` method of the` GuzzleHttp \ Psr7 \ S
 
 ---
 
-**페이지:** [← 이전](page-1.md) | **2**
+**페이지:** [← 이전](README.md) | **2**
 
 
 *Last updated: 2025-08-01*
