@@ -19,7 +19,7 @@ jobs:
     - name: Update PR List
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        EXCLUDED_USERS: "dependabot,renovate,github-actions,bot,yenaryenar,mtudy"
+        EXCLUDED_USERS: "dependabot,renovate,github-actions,bot,mtudy,yenaryenar"
       run: |
         cat > update-prs.js << 'SCRIPT_END'
         const https = require('https');
@@ -142,43 +142,18 @@ jobs:
             mainMarkdown += generatePRCard(pr);
           });
           
-          // 더 보기 링크
-          if (allPRs.length > ITEMS_PER_PAGE) {
-            mainMarkdown += '\n**[→ 더 많은 PR 보기 (' + (allPRs.length - ITEMS_PER_PAGE) + '개 더)](more.md)** | ';
-            for (let i = 2; i <= Math.min(totalPages, 5); i++) {
-              mainMarkdown += '[' + i + '페이지](page-' + i + '.md) ';
+          // 다음 페이지 링크
+          if (totalPages > 1) {
+            mainMarkdown += '\n**페이지:** **1** ';
+            for (let i = 2; i <= Math.min(totalPages, 6); i++) {
+              mainMarkdown += '| [' + i + '](page-' + i + '.md) ';
             }
-            if (totalPages > 5) mainMarkdown += '... [' + totalPages + '페이지](page-' + totalPages + '.md)';
+            if (totalPages > 6) mainMarkdown += '... [' + totalPages + '](page-' + totalPages + '.md)';
             mainMarkdown += '\n';
           }
           
           mainMarkdown += '\n*Last updated: ' + new Date().toISOString().split('T')[0] + '*\n';
           fs.writeFileSync('README.md', mainMarkdown);
-          
-          // more.md (전체 목록)
-          let moreMarkdown = '# 📋 All Pull Requests\n\n';
-          moreMarkdown += '[← 메인으로 돌아가기](README.md)\n\n';
-          moreMarkdown += '총 ' + allPRs.length + '개의 PR\n\n';
-          
-          // 페이지 링크들
-          if (totalPages > 1) {
-            moreMarkdown += '**페이지:** ';
-            for (let i = 1; i <= totalPages; i++) {
-              if (i === 1) {
-                moreMarkdown += '[1페이지](README.md) ';
-              } else {
-                moreMarkdown += '[' + i + '페이지](page-' + i + '.md) ';
-              }
-            }
-            moreMarkdown += '\n\n---\n\n';
-          }
-          
-          allPRs.forEach(pr => {
-            moreMarkdown += generatePRCard(pr);
-          });
-          
-          moreMarkdown += '\n*Last updated: ' + new Date().toISOString().split('T')[0] + '*\n';
-          fs.writeFileSync('more.md', moreMarkdown);
           
           // 개별 페이지들 생성 (2페이지부터)
           for (let page = 2; page <= totalPages; page++) {
