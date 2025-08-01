@@ -1,12 +1,5 @@
 # 📋 Pull Requests
 
-## 🟢 Open [Add model customization to php-pro subagents](https://github.com/wshobson/agents/pull/18)
-**Repository:** `wshobson/agents`  
-**Updated:** 2025-07-31  
-**Description:** #7 PHP, like other languages, specifies the Sonnet 4 model.  
-
----
-
 ## ✅ Merged [Add php-pro subagent for idiomatic PHP programming.](https://github.com/wshobson/agents/pull/10)
 **Repository:** `wshobson/agents`  
 **Updated:** 2025-07-31  
@@ -163,4 +156,4 @@ In this PR changed to call the `__toString` method of the` GuzzleHttp \ Psr7 \ S
 ---
 
 
-*Last updated: 2025-07-31*
+*Last updated: 2025-08-01*
