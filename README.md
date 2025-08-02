@@ -66,15 +66,15 @@
 ## ✅ Merged [[8.x] update pagination.md](https://github.com/laravelkr/docs/pull/322)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-26  
-**Description:** 라라벨 페이지네이션 뷰의 기본 CSS 프레임워크가 부트스트랩에서 테일윈드로 바뀌었습니다.
-그 외에 기존 번역본에 일관성에 맞지 않는 잘못된 공백이나 줄바꿈이 잘못 들어간 부분을 ...  
+**Description:** 라라벨 페이지네이션 뷰의 기본 CSS 프레임워크�� 부트스트랩에서 테일윈드로 바뀌었습니다.
+그 외에 기존 번역본에 일관성에 맞지 않는 잘못된 공백이나 줄바꿈이 잘못 들어간 부분을...  
 
 ---
 
 ## ✅ Merged [[8.x] update scout.md](https://github.com/laravelkr/docs/pull/325)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 라라벨 기본 모델 네임스페이스의 변경으로 인해, 예제들의 모델 네임스페이스가 전부 수��되었습니다.  
+**Description:** 라라벨 기본 모델 네임스페이스의 변경으로 인해, 예제들의 모델 네임스페이스가 전부 수정되었습니다.  
 
 ---
 
