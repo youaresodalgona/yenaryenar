@@ -91,4 +91,4 @@ In this PR changed to call the `__toString` method of the` GuzzleHttp \ Psr7 \ S
 **페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
 
 
-*Last updated: 2025-08-03*
+*Last updated: 2025-08-04*
