@@ -74,7 +74,7 @@
 ## ✅ Merged [[8.x] update scout.md](https://github.com/laravelkr/docs/pull/325)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 라라벨 기본 모델 네임스페이스의 변경으로 인해, 예제들의 모델 네임스페이스가 전부 수��되었습니다.  
+**Description:** 라라벨 기본 모델 네임스페이스의 변경으로 인해, 예제들의 모델 네임스페이스가 전부 수정되었습니다.  
 
 ---
 
