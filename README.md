@@ -41,9 +41,9 @@
 ## ✅ Merged [라라벨 버전 6.x -> 8.x로 업그레이드](https://github.com/laravelkr/website/pull/43)
 **Repository:** `laravelkr/website`  
 **Updated:** 2020-11-22  
-**Description:** 해당 프로젝트 라라벨 버전을 6.x에서 8.x로 업그레이드 했습니다.
+**Description:** 해당 프로젝트 라라벨 버전을 6.x���서 8.x로 업그레이드 했습니다.
 
-각 버전 업그레이드에 대해서 별도의 커밋으로 정리했고, 업그레이드 방식은 각 버전에 대한 [Upgrade...  
+각 버전 업그레이드에 대해서 별도의 커밋으로 정리했고, 업그레이드 방식은 각 버전에 대한 [Upgra...  
 
 ---
 
@@ -66,8 +66,8 @@
 ## ✅ Merged [[8.x] update pagination.md](https://github.com/laravelkr/docs/pull/322)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-26  
-**Description:** 라라벨 페이지네이션 뷰의 기본 CSS 프레임워크가 ���트스트랩에서 테일윈드로 바뀌었습니다.
-그 외에 기존 번역본에 일관성에 맞지 않는 잘못된 공백이나 줄바꿈이 잘못 들어간 부분...  
+**Description:** 라라벨 페이지네이션 뷰의 기본 CSS 프레임워크가 부트스트랩에서 테일윈드로 바뀌었습니다.
+그 외에 기존 번역본에 일관성에 맞지 않는 잘못된 공백이나 줄바꿈이 잘못 들어간 부분을 ...  
 
 ---
 
@@ -81,4 +81,4 @@
 
 **페이지:** **1** | [2](page-2.md) | [3](page-3.md) 
 
-*Last updated: 2025-08-11*
+*Last updated: 2025-08-12*
