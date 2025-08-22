@@ -81,4 +81,4 @@
 
 **페이지:** **1** | [2](page-2.md) | [3](page-3.md) 
 
-*Last updated: 2025-08-21*
+*Last updated: 2025-08-22*
