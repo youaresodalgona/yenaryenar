@@ -41,9 +41,9 @@
 ## ✅ Merged [라라벨 버전 6.x -> 8.x로 업그레이드](https://github.com/laravelkr/website/pull/43)
 **Repository:** `laravelkr/website`  
 **Updated:** 2020-11-22  
-**Description:** 해당 프로젝트 라라벨 버전을 6.x에서 8.x로 업그레이드 했습니다.
+**Description:** 해당 프로젝트 라라벨 버전을 6.x에�� 8.x로 업그레이드 했습니다.
 
-각 버전 업그레이드에 대해서 별도의 커밋으로 정리했고, 업그레이드 방식은 각 버전에 대한 [Upgrade...  
+각 버전 업그레이드에 대해서 별도의 커밋으로 정리했고, 업그레이드 방식은 각 버전에 대한 [Upgrad...  
 
 ---
 
@@ -81,4 +81,4 @@
 
 **페이지:** **1** | [2](page-2.md) | [3](page-3.md) 
 
-*Last updated: 2025-08-24*
+*Last updated: 2025-08-25*
