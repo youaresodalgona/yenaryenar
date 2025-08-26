@@ -1,10 +1,19 @@
 # 📋 Pull Requests - Page 3
 
-[← 메인으로 돌아가기](https://github.com/yenaryenar)
+[← 메인으로 돌아가기](https://github.com/youaresodalgona)
 
-총 22개의 PR (21-22)
+총 23개의 PR (21-23)
 
 **페이지:** [← 이전](page-2.md) | **3**
+
+## ✅ Merged [Fix parse xml for Naver user](https://github.com/SocialiteProviders/Providers/pull/340)
+**Repository:** `SocialiteProviders/Providers`  
+**Updated:** 2019-09-04  
+**Description:** closed #339 
+
+In this PR changed to call the `__toString` method of the` GuzzleHttp \ Psr7 \ Strea...  
+
+---
 
 ## ✅ Merged [Added Korean translation](https://github.com/z-song/laravel-admin/pull/3434)
 **Repository:** `z-song/laravel-admin`  
