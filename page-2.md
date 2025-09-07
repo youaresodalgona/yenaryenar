@@ -23,7 +23,7 @@
 ## ❌ Closed [[8.x] update database.md](https://github.com/laravelkr/docs/pull/320)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 내용 자체에 변경사항은 없��데, 문서 내에 간단한 HTML이 추가된 걸 발견해서 수정했습니다.  
+**Description:** 내용 자체에 변경사항은 없는데, 문서 내에 간단한 HTML이 추가된 걸 발견해서 수정했습니다.  
 
 ---
 
