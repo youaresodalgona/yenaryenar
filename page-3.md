@@ -35,4 +35,4 @@ In this PR changed to call the `__toString` method of the` GuzzleHttp \ Psr7 \ S
 **페이지:** [← 이전](page-2.md) | **3**
 
 
-*Last updated: 2025-09-08*
+*Last updated: 2025-09-09*
