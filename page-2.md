@@ -79,7 +79,7 @@ This PR has been changed to work properly even if the 'properties' field of Kaka
 ## ✅ Merged [Pre kr 6.0 update errors.md](https://github.com/laravelkr/docs/pull/187)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2019-09-14  
-**Description:** Monolog 관련 설명이 없어져서 제거했고, 오타를 발견해서 수정했���니다.  
+**Description:** Monolog 관련 설명이 없어져서 제거했고, 오타를 발견해서 수정했습니다.  
 
 ---
 
@@ -89,4 +89,4 @@ This PR has been changed to work properly even if the 'properties' field of Kaka
 **페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
 
 
-*Last updated: 2025-09-09*
+*Last updated: 2025-09-10*
