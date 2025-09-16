@@ -23,7 +23,7 @@
 ## ❌ Closed [[8.x] update database.md](https://github.com/laravelkr/docs/pull/320)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 내용 자체에 변경사항은 없는데, 문서 내에 간단한 HTML이 추가된 걸 발견해서 수정했습니다.  
+**Description:** 내용 자체에 변경사항은 없��데, 문서 내에 간단한 HTML이 추가된 걸 발견해서 수정했습니다.  
 
 ---
 
@@ -63,7 +63,7 @@
 ## ✅ Merged [configuration.md 번역](https://github.com/laravelkr/docs/pull/250)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-03-28  
-**Description:** 제거한 문장은 [라라벨 5.3 문서](https://github.com/laravel/docs/blob/5.3/configuration.md#retrieving-environmen...  
+**Description:** 제거��� 문장은 [라라벨 5.3 문서](https://github.com/laravel/docs/blob/5.3/configuration.md#retrieving-environm...  
 
 ---
 
@@ -89,4 +89,4 @@ This PR has been changed to work properly even if the 'properties' field of Kaka
 **페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
 
 
-*Last updated: 2025-09-15*
+*Last updated: 2025-09-16*
