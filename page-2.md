@@ -16,7 +16,7 @@
 ## ✅ Merged [[8.x] update seeding.md](https://github.com/laravelkr/docs/pull/324)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 시더 디렉터리 이름이 변경되었습니다. 또, 팩토��의 변경으로 예제도 변경되었습니다.  
+**Description:** 시더 디렉터리 이름이 변경되었습니다. 또, 팩토리의 변경으로 예제도 변경되었습니다.  
 
 ---
 
