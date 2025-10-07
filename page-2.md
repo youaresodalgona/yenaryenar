@@ -32,14 +32,14 @@
 **Updated:** 2020-09-22  
 **Description:** 8버전부터 프로젝트 내 모델 디렉터리가 생겼기 때문에, 그에 맞게 예제 속 모델 클래스의 네임스페이스가 변경되어 수정했습니다.
 
-또, 기존 번역본에 일관성에 맞지 않는 잘못된 ...  
+또, 기�� 번역본에 일관성에 맞지 않는 잘못된...  
 
 ---
 
 ## ✅ Merged [[8.x] update migrations.md](https://github.com/laravelkr/docs/pull/323)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 마이그레이션 설명의 스쿼싱 마이그레이션 항목이 추가되었고, 컬럼 수정자의 명령어가 하나 추가되었습니다.  
+**Description:** 마이그레이션 설명의 스쿼싱 마이그레이션 항목이 추가되었고, 컬럼 수정자의 명령어가 하나 추가��었습니다.  
 
 ---
 
@@ -89,4 +89,4 @@ This PR has been changed to work properly even if the 'properties' field of Kaka
 **페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
 
 
-*Last updated: 2025-10-06*
+*Last updated: 2025-10-07*
