@@ -89,4 +89,4 @@ This PR has been changed to work properly even if the 'properties' field of Kaka
 **페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
 
 
-*Last updated: 2026-02-19*
+*Last updated: 2026-02-20*
