@@ -30,9 +30,9 @@
 ## ✅ Merged [[8.x] update queries.md](https://github.com/laravelkr/docs/pull/321)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 8버전부터 ���로젝트 내 모델 디렉터리가 생겼기 때문에, 그에 맞게 예제 속 모델 클래스의 네임스페이스가 변경되어 수정했습니다.
+**Description:** 8버전부터 프로젝트 내 모델 디렉터리가 생겼기 때문에, 그에 맞게 예제 속 모델 클래스의 네임스페이스가 변경되어 수정했습니다.
 
-또, 기존 번역본에 일관성에 맞지 않는 잘못...  
+또, 기존 번역본에 일관성에 맞지 않는 잘못된 ...  
 
 ---
 
@@ -63,7 +63,7 @@
 ## ✅ Merged [configuration.md 번역](https://github.com/laravelkr/docs/pull/250)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-03-28  
-**Description:** 제거한 문장은 [라라�� 5.3 문서](https://github.com/laravel/docs/blob/5.3/configuration.md#retrieving-environme...  
+**Description:** 제거한 문장은 [라라벨 5.3 문서](https://github.com/laravel/docs/blob/5.3/configuration.md#retrieving-environmen...  
 
 ---
 
