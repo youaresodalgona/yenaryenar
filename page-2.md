@@ -63,7 +63,7 @@
 ## ✅ Merged [configuration.md 번역](https://github.com/laravelkr/docs/pull/250)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-03-28  
-**Description:** 제거한 문장은 [라라�� 5.3 문서](https://github.com/laravel/docs/blob/5.3/configuration.md#retrieving-environme...  
+**Description:** 제거한 문장은 [라라벨 5.3 문서](https://github.com/laravel/docs/blob/5.3/configuration.md#retrieving-environmen...  
 
 ---
 
