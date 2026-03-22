@@ -63,7 +63,7 @@
 ## ✅ Merged [configuration.md 번역](https://github.com/laravelkr/docs/pull/250)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-03-28  
-**Description:** 제거한 문장은 [라라�� 5.3 문서](https://github.com/laravel/docs/blob/5.3/configuration.md#retrieving-environme...  
+**Description:** 제거한 문장은 [라라벨 5.3 문서](https://github.com/laravel/docs/blob/5.3/configuration.md#retrieving-environmen...  
 
 ---
 
@@ -89,4 +89,4 @@ This PR has been changed to work properly even if the 'properties' field of Kaka
 **페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
 
 
-*Last updated: 2026-03-21*
+*Last updated: 2026-03-22*
