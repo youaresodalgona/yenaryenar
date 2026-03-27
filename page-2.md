@@ -23,16 +23,16 @@
 ## ❌ Closed [[8.x] update database.md](https://github.com/laravelkr/docs/pull/320)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 내용 자체에 변경사항은 없는데, 문서 내에 간단한 HTML이 추가된 걸 발견해서 수정했습니다.  
+**Description:** 내용 자체에 변경사항은 없는데, 문서 내에 간단한 HTML이 추가된 걸 발견해�� 수정했습니다.  
 
 ---
 
 ## ✅ Merged [[8.x] update queries.md](https://github.com/laravelkr/docs/pull/321)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 8버전부터 ��로젝트 내 모델 디렉터리가 생겼기 때문에, 그에 맞게 예제 속 모델 클래스의 네임스페이스가 변경되어 수정했습니다.
+**Description:** 8버전부터 ���로젝트 내 모델 디렉터리가 생겼기 때문에, 그에 맞게 예제 속 모델 클래스의 네임스페이스가 변경되어 수정했습니다.
 
-또, 기존 번역본에 일관성에 맞지 않는 잘못된...  
+또, 기존 번역본에 일관성에 맞지 않는 잘못...  
 
 ---
 
