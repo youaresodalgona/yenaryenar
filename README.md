@@ -80,4 +80,4 @@
 
 **페이지:** **1** | [2](page-2.md) | [3](page-3.md) 
 
-*Last updated: 2026-03-31*
+*Last updated: 2026-04-01*
