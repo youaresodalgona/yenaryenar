@@ -2,7 +2,7 @@
 
 [← 메인으로 돌아가기](https://github.com/youaresodalgona)
 
-총 22개의 PR (11-20)
+총 23개의 PR (11-20)
 
 **페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
 

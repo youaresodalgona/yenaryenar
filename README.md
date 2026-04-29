@@ -1,6 +1,6 @@
 # 📋 Pull Requests
 
-총 22개의 PR
+총 23개의 PR
 
 ## ❌ Closed [Add model customization to php-pro subagents](https://github.com/wshobson/agents/pull/18)
 **Repository:** `wshobson/agents`  
