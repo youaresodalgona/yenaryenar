@@ -2,7 +2,7 @@
 
 [← 메인으로 돌아가기](https://github.com/youaresodalgona)
 
-총 23개의 PR (21-23)
+총 22개의 PR (21-22)
 
 **페이지:** [← 이전](page-2.md) | **3**
 
@@ -22,17 +22,10 @@ In this PR changed to call the `__toString` method of the` GuzzleHttp \ Psr7 \ S
 
 ---
 
-## ✅ Merged [docs: Typo in Korean translation](https://github.com/vuetifyjs/vuetify/pull/5922)
-**Repository:** `vuetifyjs/vuetify`  
-**Updated:** 2019-04-14  
-**Description:** I found a typo for Korean translation and corrected it. Please merge them.  
-
----
-
 
 ---
 
 **페이지:** [← 이전](page-2.md) | **3**
 
 
-*Last updated: 2026-04-27*
+*Last updated: 2026-04-29*
