@@ -37,7 +37,7 @@
 
 ---
 
-## ✅ Merged [프로젝트 설치 관련 README 업데이트](https://github.com/laravelkr/website/pull/44)
+## ✅ Merged [프로젝트 설치 ��련 README 업데이트](https://github.com/laravelkr/website/pull/44)
 **Repository:** `laravelkr/website`  
 **Updated:** 2020-12-22  
 **Description:** 기존 문서대로 실행 시에, 원활한 프로젝트 동작이 되지 않아 관련 문서를 업데이트 해봤습니다.  
