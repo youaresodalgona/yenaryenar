@@ -23,7 +23,7 @@
 ## ❌ Closed [[8.x] update database.md](https://github.com/laravelkr/docs/pull/320)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 내용 자체에 변경사항은 없는데, 문서 내에 간단한 HTML이 추가된 걸 발견해서 수정했습니다.  
+**Description:** 내용 자체에 변경사항은 없는데, 문서 내��� 간단한 HTML이 추가된 걸 발견해서 수정했습니다.  
 
 ---
 
@@ -39,7 +39,7 @@
 ## ✅ Merged [[8.x] update migrations.md](https://github.com/laravelkr/docs/pull/323)
 **Repository:** `laravelkr/docs`  
 **Updated:** 2020-09-22  
-**Description:** 마이그레이션 설명의 스쿼싱 마이그레이션 항목이 추가되었고, 컬럼 수정자의 명령어가 하나 추가되었습니다.  
+**Description:** 마이그레이션 설명의 ���쿼싱 마이그레이션 항목이 추가되었고, 컬럼 수정자의 명령어가 하나 추가되었습니다.  
 
 ---
 
