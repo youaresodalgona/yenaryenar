@@ -2,9 +2,16 @@
 
 [← 메인으로 돌아가기](https://github.com/youaresodalgona)
 
-총 22개의 PR (11-20)
+총 23개의 PR (11-20)
 
 **페이지:** [← 이전](README.md) | **2** | [다음 →](page-3.md)
+
+## ✅ Merged [[8.x] update scout.md](https://github.com/laravelkr/docs/pull/325)
+**Repository:** `laravelkr/docs`  
+**Updated:** 2020-09-22  
+**Description:** 라라벨 기본 모델 네임스페이스의 변경으로 인해, 예제들의 모델 네임스페이스가 전부 수정되었습니다.  
+
+---
 
 ## ✅ Merged [[8.x] update seeding.md](https://github.com/laravelkr/docs/pull/324)
 **Repository:** `laravelkr/docs`  
@@ -73,15 +80,6 @@ This PR has been changed to work properly even if the 'properties' field of Kaka
 **Repository:** `laravelkr/docs`  
 **Updated:** 2019-09-14  
 **Description:** Monolog 관련 설명이 없어져서 제거했고, 오타를 발견해서 수정했습니다.  
-
----
-
-## ✅ Merged [Fix parse xml for Naver user](https://github.com/SocialiteProviders/Providers/pull/340)
-**Repository:** `SocialiteProviders/Providers`  
-**Updated:** 2019-09-04  
-**Description:** closed #339 
-
-In this PR changed to call the `__toString` method of the` GuzzleHttp \ Psr7 \ Strea...  
 
 ---
 

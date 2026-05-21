@@ -1,6 +1,6 @@
 # 📋 Pull Requests
 
-총 22개의 PR
+총 23개의 PR
 
 ## ❌ Closed [Add model customization to php-pro subagents](https://github.com/wshobson/agents/pull/18)
 **Repository:** `wshobson/agents`  
@@ -30,6 +30,13 @@
 
 ---
 
+## 🟢 Open [Update dependencies after PHP 7.3](https://github.com/mpociot/slack-client/pull/17)
+**Repository:** `mpociot/slack-client`  
+**Updated:** 2021-03-02  
+**Description:** Changed to support php>=7.3.  
+
+---
+
 ## ✅ Merged [프로젝트 설치 관련 README 업데이트](https://github.com/laravelkr/website/pull/44)
 **Repository:** `laravelkr/website`  
 **Updated:** 2020-12-22  
@@ -37,7 +44,7 @@
 
 ---
 
-## ✅ Merged [라라벨 버전 6.x -> 8.x로 업그레���드](https://github.com/laravelkr/website/pull/43)
+## ✅ Merged [라라벨 버전 6.x -> 8.x로 업그레이드](https://github.com/laravelkr/website/pull/43)
 **Repository:** `laravelkr/website`  
 **Updated:** 2020-11-22  
 **Description:** 해당 프로젝트 라라벨 버전을 6.x에서 8.x로 업그레이드 했습니다.
@@ -67,13 +74,6 @@
 **Updated:** 2020-09-26  
 **Description:** 라라벨 페이지네이션 뷰의 기본 CSS 프레임워크가 부트스트랩에서 테일윈드로 바뀌었습니다.
 그 외에 기존 번역본에 일관성에 맞지 않는 잘못된 공백이나 줄바꿈이 잘못 들어간 부분을 ...  
-
----
-
-## ✅ Merged [[8.x] update scout.md](https://github.com/laravelkr/docs/pull/325)
-**Repository:** `laravelkr/docs`  
-**Updated:** 2020-09-22  
-**Description:** 라라벨 기본 모델 네임스페이스의 변경으로 인해, 예제들의 모델 네임스페이스가 전부 수정되었습니다.  
 
 ---
 
